@@ -1,0 +1,45 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarItems">
+        <!--<ul class="navbar-nav ml-auto">-->
+        <ul class="navbar-nav mx-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {% if page=='index'%}active{%endif%}" href="index.html" id="homeDropdown" aria-haspopup="true" aria-expanded="false">
+                  Home
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                  <li><a class="dropdown-item" href="index.html#about">About</a></li>
+                  <li><a class="dropdown-item" href="index.html#news">News</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if page=='students'%}active{%endif%}"
+                href="students.html">Students</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {% if page=='publication'%}active{%endif%}"
+                href="publication.html">Publications</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if page=='software'%}active{%endif%}"
+                   href="software.html">Software</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if page=='teach'%}active{%endif%}" href="teaching.html">Teaching</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if page=='awards'%}active{%endif%}"
+                   href="awards.html">Awards</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if page=='service'%}active{%endif%}" href="service.html">Services</a>
+            </li>
+        </ul>
+    </div>
+</nav>

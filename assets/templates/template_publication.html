@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Jane Smith, PhD</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+{% include 'navbar.html' %}
+
+    <div class="container">
+
+        <div class="row" id="publication">
+            <div class="col-md-12">
+                <div class="section_header">Publications</div>
+                {% for paper in papers %}
+                <div class="publication">
+                    <div class="pub_title">
+                        {{paper.title}}
+                    </div>
+		    {%- if 'award' in paper.keys() %}
+                        <div class="pub_award">
+                            {{paper.award}}
+                        </div>
+		    {%- endif %}
+                    <div class="pub_authors">
+                        {{paper.author}}
+                    </div>
+                    <div class="pub_conference">
+                        {{paper.conference}}.
+                    </div>
+                    {%- if 'pdf' in paper.keys() or 'poster' in paper.keys() or 'ppt' in paper.keys()%}
+                    <div class="pub_links">
+                        {%- if 'pdf' in paper.keys() %}
+                        <a href="{{paper.pdf}}" class="pub_pdf"></a>
+                        {%- endif %}
+                        {%- if 'poster' in paper.keys() %}
+                        <a href="{{paper.poster}}" class="pub_poster"></a>
+                        {%- endif %}
+                        {%- if 'ppt' in paper.keys() %}
+                        <a href="{{paper.ppt}}" class="pub_ppt"></a>
+                        {%- endif %}
+                    </div>
+                    {%- endif %}
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+
+        <div class="row" id="patent">
+            <div class="col-md-12">
+                <div class="section_header">Patents</div>
+                {% for paper in patents %}
+                <div class="publication">
+                    <div class="pub_title">
+                        {{paper.title}}
+                    </div>
+                    <div class="pub_conference">
+                        {{paper.conference}}.
+                    </div>
+                    <div class="pub_links">
+                        {%- if 'extlink' in paper.keys() %}
+                        <a href="{{paper.extlink}}" class="pub_extlink"></a>
+                        {%- endif %}
+                    </div>
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/style.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Jane Smith, PhD</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+{% include 'navbar.html' %}
+
+    <div class="container">
+        <div class="row justify-content-center" id="about">
+            <div class="col-md-4">
+                <img src="assets/images/photo.jpg" class="img-thumbnail mx-auto d-block portrait_img"
+                    alt="Sophia Shao">
+            </div>
+            <div class="col-md-4 flex align-items-center about_info">
+                <div>
+                    <h1>Jane Smith, Ph.D.</h1>
+                    <h2>EECS, University</h2>
+                    <h2>jsmith [at] university [.] edu</h2>
+                    <br>
+
+                    <h2>Address</h2>
+                    <br>
+                    <h5>
+                        <a href="assets/cv/cv.pdf" target="_blank">[CV]</a>
+                        <a href="index.html" target="_blank">[Google Scholar]</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about_text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </br>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="experience">
+            <div class="col-md-12">
+
+                <div class="section_header">Education</div>
+                {% for education in educations %}
+                <div class="experience">
+                    <div class="exp_title_bold">
+                        {{education.title}}
+                    </div>
+                    <div class="exp_company">
+                        {{education.company}}
+                    </div>
+                    <div class="exp_date_long">
+                        {{education.date}}
+                    </div>
+                </div>
+                {%- endfor %}
+
+                <div class="section_header">Professional Experience</div>
+                {% for job in jobs %}
+                <div class="experience">
+                    <div class="exp_title_bold">
+                        {{job.title}}
+                    </div>
+                    <div class="exp_company">
+                        {{job.company}}
+                    </div>
+                    <div class="exp_date_long">
+                        {{job.date}}
+                    </div>
+                </div>
+                {%- endfor %}
+
+            </div>
+        </div>
+        <div class="row" id="news">
+            <div class="col-md-12">
+                {%- set max_news = 15 %}
+                <div class="section_header">Recent News</div>
+                {%- for new in news %}
+                {%- if loop.index < max_news %}
+                <div class="experience">
+                    <div class="exp_title">
+                        {% if 'extlink' in new.keys() -%}
+                        {%- autoescape false -%}
+                        {%- set old_string = new.linktext -%}
+                        {%- set new_string = "<a href=\"" + new.extlink + "\" target=\"_blank\">" + new.linktext + "</a>" -%}
+                        {{ new.title|string|replace(old_string, new_string) }}
+                        {%- endautoescape -%}
+                        {%- else -%}
+                        {{new.title}}
+                        {%- endif %}
+                    </div>
+                </div>
+                {%- endif %}
+                {%- endfor %}
+                {%- if news|length > max_news %}
+                <div id="news_more">
+                    <h5><a href="news.html">[more]</a></h5>
+                </div>
+                {%- endif %}
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/style.js"></script>
+</body>
+
+</html>

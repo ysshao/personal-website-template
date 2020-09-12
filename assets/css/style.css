@@ -1,0 +1,368 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding-top: 0px;
+    /*padding-top: 62px;*/
+}
+
+ul {
+    padding-left: 25px;
+}
+
+a {
+    color: #e03333;
+}
+
+a:hover {
+    color: #f87979;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #e03333 !important;
+}
+
+.navbar-nav li:hover>ul.dropdown-menu {
+    margin-top: -8px;
+    display: block;
+}
+
+.dropdown-menu .dropdown-item:active {
+    background: #e03333 !important;
+}
+
+.container {
+    max-width: 996px;
+    margin-bottom: 100px;
+}
+
+#about {
+    padding-top: 20px;
+}
+
+#about h1 {
+    font-size: 32px;
+}
+
+#about h2 {
+    font-size: 22px;
+}
+
+#about h5 {
+    font-size: 22px;
+}
+
+.portrait_img {
+    max-height: 300px;
+}
+
+.about_text {
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.section_header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.section_header hr {
+    max-width: 100px;
+    height: 5px;
+    border-top: 3px solid #e03333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subsec_header {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.publication {
+    margin-bottom: 30px;
+}
+
+.pub_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.pub_award {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e03333;
+}
+
+
+.pub_authors {
+    font-size: 18px;
+}
+
+.pub_conference {
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 80px;
+}
+
+.pub_sophia {
+    font-size: 18px;
+    /* font-weight: bold; */
+    /* text-decoration: underline; */
+    padding-bottom: 1px;
+    border-bottom: 1px solid;
+    display: inline;
+    line-height: 4px;
+}
+
+.teach_pub_links {
+    font-size: 18px;
+    text-align: right;
+    margin-top: -26px;
+}
+
+.pub_links {
+    font-size: 18px;
+    text-align: right;
+    margin-top: -32px;
+}
+
+.experience {
+    margin-bottom: 5px;
+}
+
+.experience>img:first-of-type {
+    width: 100px;
+}
+
+.exp_title {
+    font-size: 18px;
+    padding-right: 80px;
+}
+
+.exp_title_bold {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 80px;
+}
+
+.exp_company {
+    font-size: 18px;
+    margin-right: 150px;
+}
+
+.exp_date {
+    margin-top: -30px;
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+}
+
+.exp_date_long {
+    margin-top: -30px;
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+}
+
+
+.software {
+    margin-bottom: 10px;
+}
+
+.software_name {
+    margin-right: 30px;
+}
+
+.software_link {
+    font-size: 18px;
+    margin-top: -36px;
+    text-align: right;
+}
+
+.student {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.student_name {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 0px;
+}
+
+.student_link {
+    font-size: 18px;
+    margin-top: -26px;
+    text-align: right;
+}
+
+#news_more h5 {
+    text-align: center;
+}
+
+@media (max-width: 416px) {
+
+    .dropdown-item {
+        text-align: center;
+    }
+
+    .about_info {
+        text-align: center;
+    }
+
+    #about h1 {
+        font-size: 32px;
+    }
+
+    #about h2 {
+        font-size: 22px;
+    }
+
+    .experience {
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .exp_company {
+        font-size: 20px;
+        margin-right: 0px;
+    }
+
+    .exp_title {
+        font-size: 18px;
+        padding-right: 0px;
+    }
+
+    .exp_title_bold {
+        font-size: 18px;
+        font-weight: bold;
+        padding-right: 0px;
+    }
+
+    .exp_date {
+        margin-top: 0px;
+        font-size: 18px;
+        font-style: italic;
+        text-align: left;
+    }
+
+    .exp_date_long {
+        margin-top: 0px;
+        font-size: 18px;
+        font-style: italic;
+        text-align: left;
+    }
+
+    .publication {
+        margin-bottom: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .pub_title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+    .pub_authors {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .pub_conference {
+        font-size: 16px;
+        font-style: italic;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .pub_sophia {
+        font-size: 18px;
+        padding-bottom: 1px;
+        border-bottom: 1px solid;
+        line-height: 4px;
+    }
+
+    .pub_links {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .software_name {
+        font-size: 20px;
+        margin-right: 0px;
+    }
+
+    .software_link {
+        font-size: 18px;
+        margin-top: 0px;
+        text-align: right;
+    }
+}
+
+@media (max-width:768px) and (min-width:417px) {
+
+    .dropdown-item {
+        text-align: center;
+    }
+
+    .about_info {
+        text-align: center;
+    }
+
+    #about h1 {
+        font-size: 28px;
+    }
+
+    #about h2 {
+        font-size: 20px;
+    }
+
+    .exp_title {
+        font-size: 18px;
+        padding-right: 0px;
+    }
+
+    .exp_date_long {
+        margin-top: -30px;
+        font-size: 18px;
+        font-style: italic;
+        text-align: right;
+    }
+
+    .pub_links {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 0px;
+    }
+}
+
+
+@media (max-width:992px) and (min-width:769px) {
+
+    .dropdown-item {
+        text-align: center;
+    }
+
+    #about h1 {
+        font-size: 32px;
+    }
+
+    #about h2 {
+        font-size: 22px;
+    }
+}
