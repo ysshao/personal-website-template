@@ -1,5 +1,7 @@
 ## Personal website template
 
+Feel free to use this personal website template to build your personalized academic website.
+
 ## Dependences:
 * jinja2
 
